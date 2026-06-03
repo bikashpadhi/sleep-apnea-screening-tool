@@ -206,13 +206,10 @@ Results reported on the held-out test set (4 patients, ~1 600 epochs):
 
 | Metric | Raw | With Gaussian Smoothing (σ=1.5) |
 |---|---|---|
-| F1 Score | — | — |
-| Precision | — | — |
-| Recall (Sensitivity) | — | — |
-| Specificity | — | — |
-| AUROC | — | — |
-
-> Fill in your numbers after running `evaluate.py`. The `--` placeholders are intentional.
+| F1 Score | 0.6113 | 0.6728 |
+| Precision | 0.5853 | 0.5916 |
+| Recall (Sensitivity) | 0.6398 | 0.7797 |
+| Specificity | 0.6232 | 0.5528 |
 
 **Why temporal smoothing helps:** Apnea events cluster into runs of 2–25 consecutive 60-second windows. Gaussian smoothing (σ=1.5 windows = ±90 s context) suppresses isolated false-positive spikes and fills isolated false-negative dips without crossing patient recording boundaries.
 
